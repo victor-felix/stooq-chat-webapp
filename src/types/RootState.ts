@@ -1,15 +1,18 @@
-import { GithubRepoFormState } from 'app/pages/HomePage/Features/GithubRepoForm/slice/types';
-import { ThemeState } from 'styles/theme/slice/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
+
+import { MessagesState } from 'app/pages/ChatPage/Features/Messages/slice/types';
+import { RoomsState } from 'app/pages/ChatPage/Features/Rooms/slice/types';
+import { AuthenticationState } from 'app/pages/LoginPage/Features/LoginForm/slice/types';
+import { RegisterState } from 'app/pages/RegisterPage/Features/RegisterForm/slice/types';
 
 /* 
   Because the redux-injectors injects your reducers asynchronously somewhere in your code
   You have to declare them here manually
-  Properties are optional because they are injected when the components are mounted sometime in your application's life. 
-  So, not available always
 */
 export interface RootState {
-  theme?: ThemeState;
-  githubRepoForm?: GithubRepoFormState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
+  authentication: AuthenticationState;
+  register: RegisterState;
+  messages: MessagesState;
+  rooms: RoomsState;
 }

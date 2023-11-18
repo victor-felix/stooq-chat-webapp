@@ -1,19 +1,35 @@
 {
-  "routingFeature": {
-    "title": "Industry-standard Routing",
-    "description": "It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible."
+  "title": "welcome",
+  "plugins": {
+    "axios": {
+      "error": {
+        "internal": {
+          "message": "An unexpected failure has occurred"
+        }
+      }
+    }
   },
-  "i18nFeature": {
-    "title": "i18n Internationalization & Pluralization",
-    "selectLanguage": "Select Language",
-    "description": "Scalable apps need to support multiple languages, easily add and support multiple languages. Change the language below to see how instantly it updates the page without refreshing."
+  "links": {
+    "loginLinkLabel": "Back to Login",
+    "registerLinkLabel": "Create new account"
   },
-  "feedbackFeature": {
-    "title": "Instant Feedback",
-    "description": "Enjoy the best DX and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page."
+  "button": {
+    "labels": {
+      "loginButtonLabel": "Login",
+      "registerButtonLabel": "Register"
+    }
   },
-  "scaffoldingFeature": {
-    "title": "Quick Scaffolding",
-    "description": "Automate the creation of components, features, routes, selectors and sagas - and their tests - right from the CLI! Avoid fighting the glue of your code and focus on your app!"
+  "input": {
+    "labels": {
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "userNameLabel": "Name"
+    },
+    "validations": {
+      "emailInvalidMessage": "Email is invalid",
+      "emailIsRequiredMessage": "Email is required",
+      "passwordIsRequiredMessage": "Password is required",
+      "userNameIsRequiredMessage": "Name is required"
+    }
   }
 }
